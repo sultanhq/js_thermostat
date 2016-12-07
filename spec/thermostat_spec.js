@@ -43,7 +43,7 @@ describe("Thermostat", function() {
     });
 
     it('if powersaving is off and temp is above maximum temp reduce to maximum temp', function() {
-      thermostat.startTemp(26);
+      thermostat.startTemp(25);
       thermostat.powerSavingOn()
       expect(thermostat.temp).toEqual(25)
     });
@@ -58,5 +58,24 @@ describe("Thermostat", function() {
       expect(function(){thermostat.increaseTemp();}).toThrowError("Cannot increase temp above maximum")
     });
 
+    it('reset function will reset the temperature to 20', function(){
+      thermostat.startTemp(25);
+      thermostat.reset(20)
+      expect(thermostat.temp).toEqual(20)
+    });
 
+    it('returns the current energy usage as low if < 18 degrees', function() {
+      thermostat.startTemp(17);
+      expect(thermostat.currentUsage()).toEqual("Low")
+    });
+
+    it('returns the current energy usage as medium if > 18 & < 25 degrees', function() {
+      thermostat.startTemp(20);
+      expect(thermostat.currentUsage()).toEqual("Medium")
+    });
+
+    it('returns the current energy usage as high if > 25 degrees', function() {
+      thermostat.startTemp(27);
+      expect(thermostat.currentUsage()).toEqual("High")
+    });
 });
