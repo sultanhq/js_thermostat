@@ -1,0 +1,62 @@
+#window {
+  overflow:auto;
+background-color: #00BCD4;
+height: 300px;
+width: 500px;
+margin: auto;
+margin-top: 20%;
+border: solid 1px;
+
+}
+
+#header {
+  overflow: auto;
+  border-bottom: solid 1px;
+  line-height: 10%;
+  height: 10%;
+  text-align: center;
+  padding: 5% 10%;
+
+}
+
+#title {
+float:left;
+}
+
+#reset {
+float:right;
+}
+
+#display {
+  overflow: auto;
+
+  background-color: yellow;
+
+  height:100%;
+  width:100%;
+
+}
+
+#info {
+  float:left;
+  background-color: red;
+  width:70%;
+  height:100%;
+}
+
+#info p {
+  text-align: center;
+}
+
+#controls {
+  overflow: auto;
+  text-align: center;
+  float:right;
+  background-color: green;
+  width:30%;
+  height:100%;
+}
+
+#controls p {
+  text-align: center;
+}

@@ -1,0 +1,52 @@
+<HTML>
+<HEAD>
+<TITLE>
+  Thermostat
+</TITLE>
+<link rel="stylesheet" type="text/css" href="./public/styles/style.css">
+</HEAD>
+
+<BODY>
+  <script src="env.js"></script>
+  <script src="src/jquery.js"></script>
+<div id="window">
+
+  <div id="header">
+    <h1 id="title">Thermostat</h1>
+    <p id="reset"> <button id="reset-button">Reset</button> </p>
+  </div>
+
+  <div id="display">
+    <div id="info">
+      <p>Temp</p>
+      <p id="currentTemp"></p>
+      <p id="usage"></p>
+
+    </div>
+
+
+    <div id="controls">
+      <div><p>Controls</p></div>
+
+      <button id="increase-temp"> Temp + </button><br><br>
+      <button id="decrease-temp"> Temps- </button><br><br>
+      <button id="power-saving-toggle"> Power-save </button>
+      <p id="power-saving-state"></p>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+
+
+
+<script src="src/Thermostat.js"></script>
+<script src="src/functions.js"></script>
+
+</BODY>
+</HTML>

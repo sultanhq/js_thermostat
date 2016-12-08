@@ -4,7 +4,7 @@ function Thermostat() {
   this.temp = 20;
   this.minimumTemp = 10;
   this.powerSaving = true;
-  this.maximumTemp = 32
+  this.maximumTemp = 25;
   this.usage = "Medium"
 }
 
