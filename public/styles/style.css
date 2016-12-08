@@ -19,6 +19,18 @@ border: solid 1px;
 
 }
 
+.medium {
+  background-color: yellow;
+}
+
+.low {
+  background-color: green;
+}
+
+.high {
+  background-color: red;
+}
+
 #title {
 float:left;
 }
