@@ -15,7 +15,12 @@ var updateDisplay = function() {
   $.get(`http://api.openweathermap.org/data/2.5/weather?q=${selectedCity},uk&appid=a3d9eb01d4de82b9b8d0849ef604dbed&units=metric`, function(data) {
   $("#weather-api").text(data.main.temp);
 });
+  $("#thermostat-fill").css("height",(`${(thermostat.temp.map(10,32,5,100))}%`))
 };
+
+Number.prototype.map = function (in_min, in_max, out_min, out_max) {
+  return (this - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
+}
 
 function displayWeather(city){
   var url = 'http://api.openweathermap.org/data/2.5/weather?q=';
